@@ -1,0 +1,100 @@
+/* main */
+.portfolio__flex {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+
+.portfolio__buttons {
+  color: inherit;
+  background-color: #f5f4fa;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.625;
+  border: none;
+  cursor: pointer;
+  padding: 8px 25px;
+  border-radius: 5px;
+  letter-spacing: 0.03em;
+  transition: background-color 250ms, color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio__buttons:hover,
+.portfolio__buttons:focus {
+  color: var(--color-link);
+  background-color: var(--color-hover);
+  cursor: pointer;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio__block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+  max-width: 1200px;
+}
+
+.portfolio__headers {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.portfolio__overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__description {
+  position: absolute;
+  display: block;
+  top: 0%;
+  width: 100%;
+  height: 294px;
+  color: var(--color-link);
+  background-color: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+  transform: translateY(140%);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio__link:hover .portfolio__description {
+  transform: translateY(0%);
+}
+
+.portfolio__link:focus .portfolio__description {
+  transform: translateY(0%);
+}
+
+.portfolio__link {
+  text-decoration: none;
+  display: block;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.portfolio__text {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}

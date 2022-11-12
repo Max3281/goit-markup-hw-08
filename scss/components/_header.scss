@@ -1,0 +1,134 @@
+/* header */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (max-width: 767px) {
+    min-width: 320px;
+    max-width: 767px;
+    width: auto;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 767px) {
+    min-width: 320px;
+    max-width: 767px;
+    width: auto;
+    padding: 10px 0;
+  }
+
+  &__burger-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--color-hover);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+
+  &__header {
+    margin-right: 93px;
+    color: var(--color-primary);
+
+    @media (max-width: 767px) {
+      margin-right: 0px;
+    }
+  }
+}
+
+.ul-list {
+  list-style: none;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    fill: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding: 32px 0;
+    transition: fill 250ms, color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-hover);
+      fill: var(--color-hover);
+    }
+
+    &--current {
+      position: relative;
+      color: var(--color-hover);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      padding: 32px 0;
+      transition: fill 250ms, color 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--color-hover);
+      }
+
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--color-hover);
+        bottom: -1px;
+        content: '';
+      }
+    }
+  }
+
+  &__text {
+    color: var(--color-text);
+  }
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.container__header-navigation {
+  margin-left: auto;
+}
+
+.header-border {
+  border-width: 1600px;
+  border-bottom: 1px solid #ececec;
+}
