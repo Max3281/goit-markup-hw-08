@@ -7,7 +7,7 @@
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/dt-overlaybg.jpg);
   text-align: center;
-  background-size: auto;
+  background-size: cover;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url(../images/dt-overlaybg@2x.jpg);
@@ -20,6 +20,11 @@
     padding: 118px 0px;
     background-image: url(../images/m-hero-bg.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
     background-position: center;
     background-size: cover;
   }
