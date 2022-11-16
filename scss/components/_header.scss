@@ -16,7 +16,9 @@
 
   @media (max-width: 767px) {
     width: 100%;
+    max-width: 450px;
     padding: 10px 0;
+    margin: 0 auto;
   }
 
   &__burger-button {
